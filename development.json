@@ -1,0 +1,14 @@
+{
+  "log":["*"],
+  "verbose": true,
+  "databases": {
+    "kitchen-sync": {
+      "server":"walrus:.",
+      "users": {"GUEST": {"disabled": false, "all_channels": ["*"], "admin_channels": ["*"]}},
+      "sync":`
+        function(doc) {
+          channel(doc.channels);
+        }`
+    }
+  }
+}
