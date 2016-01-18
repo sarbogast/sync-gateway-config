@@ -4,7 +4,7 @@
   "databases": {
     "kitchen-sync": {
       "server":"walrus:.",
-      "users": {"GUEST": {"disabled": false, "all_channels": ["*"], "admin_channels": ["*"]}},
+      "users": {"GUEST": {"disabled": false, "all_channels": ["*"], "admin_channels": ["*"]}, "james":{"password":"letmein", "all_channels":["*"], "admin_channels":["*"]}},
       "sync":`
         function(doc) {
           channel(doc.channels);
